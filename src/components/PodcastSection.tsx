@@ -22,24 +22,12 @@ export const PodcastSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div ref={imageRef} className={`transition-all duration-1000 delay-200 ${imageAnimation} space-y-6`}>
+          <div ref={imageRef} className={`transition-all duration-1000 delay-200 ${imageAnimation}`}>
             <img
               src="/F1APM NEW LOGO.png"
               alt="F1APM Podcast cover art"
               className="rounded-lg shadow-2xl w-full"
             />
-
-            {/* Episode embed */}
-            <div>
-              <p className="text-xs text-gray-400 uppercase tracking-widest font-medium mb-2">Latest Episode</p>
-              <iframe
-                src="https://anchor.fm/shaurya-sethi6/embed/episodes/Leveraging-Domain-Knowledge-to-Break-into-PM-with-Rajas-Kshirsagar-e1p6cu2"
-                height="102"
-                width="100%"
-                style={{ border: 0, borderRadius: "8px" }}
-                title="F1APM Podcast Episode"
-              />
-            </div>
           </div>
 
           <div ref={contentRef} className={`space-y-8 transition-all duration-1000 delay-400 ${contentAnimation}`}>
@@ -89,6 +77,27 @@ export const PodcastSection = () => {
                 <Badge variant="secondary">Career Advice</Badge>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Full-width episode embeds */}
+        <div className="mt-10">
+          <p className="text-xs text-gray-400 uppercase tracking-widest font-medium mb-3">Featured Episodes</p>
+          <div className="grid grid-cols-2 gap-4">
+            <iframe
+              src="https://anchor.fm/shaurya-sethi6/embed/episodes/Leveraging-Domain-Knowledge-to-Break-into-PM-with-Rajas-Kshirsagar-e1p6cu2"
+              height="102"
+              width="100%"
+              style={{ border: 0, borderRadius: "8px" }}
+              title="Leveraging Domain Knowledge to Break into PM"
+            />
+            <iframe
+              src="https://anchor.fm/shaurya-sethi6/embed/episodes/Getting-multiple-PM-Internships-and-a-return-offer-with-Deekshit-e1ro7v1"
+              height="102"
+              width="100%"
+              style={{ border: 0, borderRadius: "8px" }}
+              title="Getting multiple PM Internships and a return offer"
+            />
           </div>
         </div>
       </div>
