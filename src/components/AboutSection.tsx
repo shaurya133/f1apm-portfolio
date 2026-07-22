@@ -6,7 +6,7 @@ import { useCountUp } from "@/hooks/useCountUp";
 const metrics = [
   { target: 5, suffix: "+", label: "Years in Product" },
   { target: 15, suffix: "K+", label: "Community Audience" },
-  { target: 50, suffix: "+", label: "University Partners" },
+  { target: 0, suffix: "", display: "1.5M", label: "Impressions in 2022" },
   { target: 350, suffix: "K+", label: "Gifts Raised for Graduates" },
 ];
 
@@ -45,13 +45,13 @@ const timeline = [
   },
 ];
 
-const CounterCard = ({ target, suffix, label }: { target: number; suffix: string; label: string }) => {
+const CounterCard = ({ target, suffix, label, display }: { target: number; suffix: string; label: string; display?: string }) => {
   const { count, ref } = useCountUp(target);
   return (
     <Card ref={ref} className="text-center p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
       <CardContent className="p-0">
         <div className="text-3xl font-bold text-primary mb-2">
-          {count}{suffix}
+          {display ?? `${count}${suffix}`}
         </div>
         <div className="text-gray-600 text-sm">{label}</div>
       </CardContent>
