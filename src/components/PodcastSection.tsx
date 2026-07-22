@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -22,15 +21,27 @@ export const PodcastSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div ref={imageRef} className={`transition-all duration-1000 delay-200 ${imageAnimation}`}>
-            <img 
-              src="/lovable-uploads/d93997d7-9d04-4f76-8140-2edb0b9c409c.png" 
-              alt="Professional podcast studio setup with microphone and headphones"
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div ref={imageRef} className={`transition-all duration-1000 delay-200 ${imageAnimation} space-y-6`}>
+            <img
+              src="/F1APM NEW LOGO.png"
+              alt="F1APM Podcast cover art"
               className="rounded-lg shadow-2xl w-full"
             />
+
+            {/* Episode embed */}
+            <div>
+              <p className="text-xs text-gray-400 uppercase tracking-widest font-medium mb-2">Latest Episode</p>
+              <iframe
+                src="https://anchor.fm/shaurya-sethi6/embed/episodes/Leveraging-Domain-Knowledge-to-Break-into-PM-with-Rajas-Kshirsagar-e1p6cu2"
+                height="102"
+                width="100%"
+                style={{ border: 0, borderRadius: "8px" }}
+                title="F1APM Podcast Episode"
+              />
+            </div>
           </div>
-          
+
           <div ref={contentRef} className={`space-y-8 transition-all duration-1000 delay-400 ${contentAnimation}`}>
             <div>
               <Badge className="mb-4 text-sm px-3 py-1">Career-Focused Interviews</Badge>
@@ -57,22 +68,17 @@ export const PodcastSection = () => {
                   <CardTitle className="text-xl text-red-800">🎯 What You'll Discover</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <span className="text-gray-700">How PMs actually landed their first role</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <span className="text-gray-700">Career transition strategies that work</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <span className="text-gray-700">Inside scoop from experienced product managers</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <span className="text-gray-700">Practical advice to fast-track your journey</span>
-                  </div>
+                  {[
+                    "How PMs actually landed their first role",
+                    "Career transition strategies that work",
+                    "Inside scoop from experienced product managers",
+                    "Practical advice to fast-track your journey",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full flex-shrink-0" />
+                      <span className="text-gray-700">{item}</span>
+                    </div>
+                  ))}
                 </CardContent>
               </Card>
 
