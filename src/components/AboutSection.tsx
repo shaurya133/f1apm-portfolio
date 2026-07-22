@@ -13,7 +13,7 @@ const metrics = [
 const timeline = [
   {
     company: "MediaMath",
-    years: "2020 – 2022",
+    years: "2021 – 2022",
     industry: "Adtech",
     color: "bg-blue-500",
     badge: "bg-blue-100 text-blue-800",
@@ -21,7 +21,7 @@ const timeline = [
   },
   {
     company: "Boostr",
-    years: "2022 – 2023",
+    years: "2022 – 2025",
     industry: "CRM / Adtech",
     color: "bg-violet-500",
     badge: "bg-violet-100 text-violet-800",
@@ -29,7 +29,7 @@ const timeline = [
   },
   {
     company: "Tassel",
-    years: "2023 – Present",
+    years: "2025 – Present",
     industry: "Edtech",
     color: "bg-emerald-500",
     badge: "bg-emerald-100 text-emerald-800",
