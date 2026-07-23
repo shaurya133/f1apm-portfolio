@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Headphones } from "lucide-react";
@@ -21,7 +20,7 @@ export const PodcastSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div ref={imageRef} className={`transition-all duration-1000 delay-200 ${imageAnimation}`}>
             <img
               src="/F1APM NEW LOGO.png"
@@ -50,32 +49,11 @@ export const PodcastSection = () => {
               </Button>
             </div>
 
-            <div className="space-y-6">
-              <Card className="bg-gradient-to-r from-red-50 to-gray-50 border-red-200 transform hover:-translate-y-1 transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl text-red-800">🎯 What You'll Discover</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  {[
-                    "How PMs actually landed their first role",
-                    "Career transition strategies that work",
-                    "Inside scoop from experienced product managers",
-                    "Practical advice to fast-track your journey",
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-red-500 rounded-full flex-shrink-0" />
-                      <span className="text-gray-700">{item}</span>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-
-              <div className="flex flex-wrap gap-3">
-                <Badge variant="secondary">Career Stories</Badge>
-                <Badge variant="secondary">PM Transitions</Badge>
-                <Badge variant="secondary">Industry Insights</Badge>
-                <Badge variant="secondary">Career Advice</Badge>
-              </div>
+            <div className="flex flex-wrap gap-3">
+              <Badge variant="secondary">Career Stories</Badge>
+              <Badge variant="secondary">PM Transitions</Badge>
+              <Badge variant="secondary">Industry Insights</Badge>
+              <Badge variant="secondary">Career Advice</Badge>
             </div>
           </div>
         </div>
